@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MyNavy HR UX Comparison</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- TOGGLE -->
+<div class="toggle-bar">
+  <span>💀 Bad UX</span>
+
+  <label class="switch">
+    <input type="checkbox" id="toggle">
+    <span class="slider"></span>
+  </label>
+
+  <span>✨ Good UX</span>
+</div>
+
+<!-- HEADER -->
+<header class="header">
+  <div class="container header-inner">
+    <h1 class="logo">⚓ MyNavy HR</h1>
+
+    <nav class="nav">
+      <a href="#">Home</a>
+      <a href="#">Career</a>
+      <a href="#">Boards</a>
+      <a href="#">Resources</a>
+      <a href="#">Support</a>
+    </nav>
+
+    <input class="search" placeholder="Search...">
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <h2>Navy Personnel Command</h2>
+    <p>Access your career tools, assignments, and support resources.</p>
+  </div>
+</section>
+
+<!-- ACTIONS -->
+<section class="actions container">
+  <a href="#" class="card">📋 Career</a>
+  <a href="#" class="card">📌 Boards</a>
+  <a href="#" class="card">🗂️ Assignments</a>
+  <a href="#" class="card">📄 References</a>
+  <a href="#" class="card">🛟 Support</a>
+</section>
+
+<!-- MESSAGES -->
+<section class="messages container">
+  <h3>Latest Updates</h3>
+  <ul>
+    <li><a href="#">NAVADMIN 069/26 – Fleet Seminar</a></li>
+    <li><a href="#">NAVADMIN 068/26 – Okinawa Anniversary</a></li>
+    <li><a href="#">ALNAV 013/26 – Fund Drive</a></li>
+  </ul>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container footer-inner">
+    <div>
+      <h4>Contact</h4>
+      <p>833-330-MNCC</p>
+      <a href="#">Email Support</a>
+    </div>
+
+    <div>
+      <h4>Resources</h4>
+      <a href="#">FOIA</a>
+      <a href="#">Privacy</a>
+      <a href="#">Accessibility</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById("toggle").addEventListener("change", function () {
+    document.body.classList.toggle("good-ux", this.checked);
+  });
+</script>
+
+</body>
+</html>

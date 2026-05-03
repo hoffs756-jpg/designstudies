@@ -1,0 +1,236 @@
+/* RESET */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* BASE (BAD UX DEFAULT) */
+body {
+  font-family: "Times New Roman", serif;
+  font-size: 12px;
+  background: #d4d0c8;
+  color: black;
+}
+
+/* TOGGLE BAR */
+.toggle-bar {
+  background: #111;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  padding: 10px;
+}
+
+/* SWITCH */
+.switch {
+  position: relative;
+  width: 50px;
+  height: 24px;
+}
+
+.switch input {
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  background: red;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.slider::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: white;
+  top: 2px;
+  left: 2px;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+input:checked + .slider {
+  background: green;
+}
+
+input:checked + .slider::after {
+  transform: translateX(26px);
+}
+
+/* HEADER */
+.header {
+  background: navy;
+  color: white;
+  padding: 5px;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav a {
+  font-size: 10px;
+  margin: 0 4px;
+  color: white;
+  text-decoration: underline;
+}
+
+.search {
+  width: 100px;
+  font-size: 10px;
+}
+
+/* HERO */
+.hero {
+  background: gray;
+  padding: 10px;
+}
+
+/* ACTIONS */
+.actions {
+  display: block;
+}
+
+.card {
+  display: block;
+  background: #ccc;
+  margin: 4px;
+  padding: 6px;
+  font-size: 10px;
+  text-decoration: underline;
+}
+
+/* MESSAGES */
+.messages {
+  font-size: 10px;
+  margin-top: 10px;
+}
+
+/* FOOTER */
+.footer {
+  background: #ccc;
+  font-size: 9px;
+  margin-top: 20px;
+  padding: 10px;
+}
+
+/* ================================================= */
+/* ================= GOOD UX ======================== */
+/* ================================================= */
+
+body.good-ux {
+  font-family: system-ui, sans-serif;
+  font-size: 16px;
+  background: #f5f7fb;
+  color: #1a2035;
+}
+
+/* HEADER */
+body.good-ux .header {
+  background: #0d2b6e;
+  padding: 20px;
+}
+
+body.good-ux .nav a {
+  font-size: 14px;
+  margin: 0 10px;
+  text-decoration: none;
+  color: #c8d8f8;
+  font-weight: 600;
+}
+
+body.good-ux .nav a:hover {
+  color: white;
+}
+
+body.good-ux .search {
+  width: 200px;
+  padding: 8px;
+  border-radius: 4px;
+  border: none;
+}
+
+/* HERO */
+body.good-ux .hero {
+  background: linear-gradient(135deg, #0d2b6e, #1a56db);
+  color: white;
+  padding: 60px 20px;
+}
+
+body.good-ux .hero h2 {
+  font-size: 28px;
+}
+
+/* ACTIONS */
+body.good-ux .actions {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 16px;
+  margin-top: -40px;
+}
+
+body.good-ux .card {
+  background: white;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #1a2035;
+  font-size: 14px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: 0.2s;
+}
+
+body.good-ux .card:hover {
+  transform: translateY(-4px);
+}
+
+/* MESSAGES */
+body.good-ux .messages {
+  margin-top: 40px;
+}
+
+body.good-ux .messages h3 {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+body.good-ux .messages a {
+  color: #1a56db;
+  text-decoration: none;
+}
+
+body.good-ux .messages a:hover {
+  text-decoration: underline;
+}
+
+/* FOOTER */
+body.good-ux .footer {
+  background: #0d2b6e;
+  color: #c8d8f8;
+  padding: 30px;
+}
+
+body.good-ux .footer-inner {
+  display: flex;
+  justify-content: space-between;
+}
+
+body.good-ux .footer a {
+  display: block;
+  color: #c8d8f8;
+  text-decoration: none;
+}
+
+body.good-ux .footer a:hover {
+  color: white;
+}
