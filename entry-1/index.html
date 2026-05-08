@@ -4,27 +4,26 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MyNavy HR UX Comparison</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Serif+Display&display=swap" rel="stylesheet">
 </head>
 <body>
-
+ 
 <!-- TOGGLE -->
 <div class="toggle-bar">
   <span>Bad</span>
-
   <label class="switch">
     <input type="checkbox" id="toggle">
     <span class="slider"></span>
   </label>
-
   <span>Good</span>
 </div>
-
+ 
 <!-- HEADER -->
 <header class="header">
   <div class="container header-inner">
-    <h1 class="logo"> MyNavy HR</h1>
-
+    <h1 class="logo">MyNavy HR</h1>
     <nav class="nav">
       <a href="#">Home</a>
       <a href="#">Career</a>
@@ -32,47 +31,77 @@
       <a href="#">Resources</a>
       <a href="#">Support</a>
     </nav>
-
     <input class="search" placeholder="Search...">
   </div>
 </header>
-
+ 
 <!-- HERO -->
 <section class="hero">
   <div class="container">
-    <h2>Navy Personnel Command</h2>
-    <p>Access your career tools, assignments, and support resources.</p>
+    <div class="hero-eyebrow">Navy Personnel Command</div>
+    <h2>Your Career.<br>Your Navy.</h2>
+    <p>Access career tools, assignment resources, advancement boards, and support — all in one place.</p>
+    <a href="#" class="hero-cta">
+      Get Started
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-7-7 7 7-7 7"/></svg>
+    </a>
   </div>
 </section>
-
+ 
 <!-- ACTIONS -->
-<section class="actions container">
-  <a href="#" class="card"> Career</a>
-  <a href="#" class="card"> Boards</a>
-  <a href="#" class="card"> Assignments</a>
-  <a href="#" class="card"> References</a>
-  <a href="#" class="card"> Support</a>
+<section class="actions">
+  <a href="#" class="card">Career</a>
+  <a href="#" class="card">Boards</a>
+  <a href="#" class="card">Assignments</a>
+  <a href="#" class="card">References</a>
+  <a href="#" class="card">Support</a>
 </section>
-
-<!-- MESSAGES -->
-<section class="messages container">
-  <h3>Latest Updates</h3>
-  <ul>
-    <li><a href="#">NAVADMIN 069/26 – Fleet Seminar</a></li>
-    <li><a href="#">NAVADMIN 068/26 – Okinawa Anniversary</a></li>
-    <li><a href="#">ALNAV 013/26 – Fund Drive</a></li>
-  </ul>
-</section>
-
-<!-- FOOTER -->
-<footer class="footer">
-  <div class="container footer-inner">
-    <div>
-      <h4>Contact</h4>
-      <p>833-330-MNCC</p>
+ 
+<!-- CONTENT GRID -->
+<div class="content-grid">
+  <!-- MESSAGES -->
+  <section class="messages">
+    <div class="messages-header">
+      <h3>Latest Updates</h3>
+      <a href="#" class="messages-view-all">View all</a>
+    </div>
+    <ul>
+      <li><a href="#">NAVADMIN 069/26 – Fleet Seminar</a></li>
+      <li><a href="#">NAVADMIN 068/26 – Okinawa Anniversary</a></li>
+      <li><a href="#">ALNAV 013/26 – Fund Drive</a></li>
+    </ul>
+  </section>
+ 
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="quick-links">
+      <h4>Quick Links</h4>
+      <a href="#">FOIA Requests</a>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Accessibility</a>
+    </div>
+ 
+    <div class="contact-card">
+      <h4>Contact MNCC</h4>
+      <div class="phone">833-330-MNCC</div>
+      <p>Available Mon–Fri, 7AM–7PM CT for career and assignment questions.</p>
       <a href="#">Email Support</a>
     </div>
-
+  </aside>
+</div>
+ 
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div>
+      <h4>MyNavy HR</h4>
+      <p>Supporting the careers and lives of Navy personnel and their families worldwide.</p>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <div class="phone-big">833-330-MNCC</div>
+      <a href="#">Email Support</a>
+    </div>
     <div>
       <h4>Resources</h4>
       <a href="#">FOIA</a>
@@ -80,13 +109,20 @@
       <a href="#">Accessibility</a>
     </div>
   </div>
+  <div class="footer-bottom">
+    <span>U.S. Department of the Navy</span>
+    <span>Official U.S. Government Website</span>
+  </div>
 </footer>
-
+ 
 <script>
-  document.getElementById("toggle").addEventListener("change", function () {
-    document.body.classList.toggle("good-ux", this.checked);
+  const toggle = document.getElementById("toggle");
+  const body = document.body;
+ 
+  toggle.addEventListener("change", function () {
+    body.classList.toggle("good-ux", this.checked);
   });
 </script>
-
+ 
 </body>
 </html>
